@@ -2,12 +2,10 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import getpass
 
-
 browser = webdriver.Firefox()
 browser.get('http://yahoo.com')
 sign_in_elem = browser.find_element_by_id('uh-signin')
 sign_in_elem.click()
-
 
 input_name = browser.find_element_by_id('login-username')
 name = str(input("Enter your email id: "))
