@@ -12,7 +12,7 @@ name = str(input("Enter your email id: "))
 input_name.send_keys(name)
 input_name.send_keys(Keys.ENTER)
 
-input_passwd = browser.find_element_by_css_selector('login-passwd')
+input_passwd = browser.find_element_by_id('login-passwd')
 passwd = getpass.getpass("Insert your password: ")
 input_passwd.send_keys(passwd)
 input_passwd.send_keys(Keys.ENTER)
