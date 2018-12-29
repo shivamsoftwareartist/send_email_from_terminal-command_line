@@ -1,3 +1,6 @@
+'''The script is to login into your yahoo account'''
+
+
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import getpass
