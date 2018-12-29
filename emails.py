@@ -1,5 +1,4 @@
-"""This is script for sending emails directly /
-through terminal or command line from yahoo.com"""
+"""This is script for sending emails directly through terminal or command line from yahoo.com"""
 
 
 import time
