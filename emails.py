@@ -1,7 +1,11 @@
+"""This is script for sending emails directly /
+through terminal or command line from yahoo.com"""
+
+
+import time
+import getpass
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-import getpass
-import time
 
 browser = webdriver.Firefox()
 browser.get('http://yahoo.com')
@@ -34,17 +38,20 @@ reciever_mail.send_keys(mail_input)
 reciever_mail.send_keys(Keys.ENTER)
 
 #subject box
-subject = browser.find_element_by_css_selector("#mail-app-component > div > div > div.compose-header.en_0 > div:nth-child(3) > div > div > input")
+subject = browser.find_element_by_css_selector(
+    "#mail-app-component > div > div > div.compose-header.en_0 > div:nth-child(3) > div > div > input")
 enter_subject = str(input("Enter subject: "))
 subject.send_keys(enter_subject)
 subject.send_keys(Keys.ENTER)
 
 #textbox
-message_box = browser.find_element_by_css_selector("#editor-container > div.rte.em_N.ir_0.o_h.N_6Fd5")
-type_message = str(input("Enter your message: ")) 
+message_box = browser.find_element_by_css_selector(
+    "#editor-container > div.rte.em_N.ir_0.o_h.N_6Fd5")
+type_message = str(input("Enter your message: "))
 message_box.send_keys(type_message)
 
 
 #sendkeys
-send_message = browser.find_element_by_css_selector("#mail-app-component > div > div > div.em_N.D_F.ek_BB.p_R.o_h > div:nth-child(2) > div > button")
+send_message = browser.find_element_by_css_selector(
+    "#mail-app-component > div > div > div.em_N.D_F.ek_BB.p_R.o_h > div:nth-child(2) > div > button")
 send_message.click()
